@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6ac0f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundAnimation 20s linear infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #6ac0f4;
+    }
+    100% {
+        background-color: #ff9f43;
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    animation: floatAnimation 3s ease infinite;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ff9f43;
+    margin-bottom: 20px;
+    font-size: 28px;
+    animation: glowAnimation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #ff9f43;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff9f43, 0 0 30px #ff9f43, 0 0 40px #ff9f43;
+    }
+}
+
+#joke-container {
+    margin: 30px 0;
+}
+
+#joke-text {
+    font-size: 20px;
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+#joke-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #ff9f43;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#joke-button:hover {
+    background-color: #ff6b3e;
+}
+
+#error-message {
+    color: #d63031;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+#loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading img {
+    width: 150px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #joke-text {
+        font-size: 16px;
+    }
+
+    #joke-button {
+        font-size: 16px;
+    }
+
+    #loading img {
+        width: 120px;
+        height: 110px;
+    }
+}
